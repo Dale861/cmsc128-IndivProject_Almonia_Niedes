@@ -1,7 +1,3 @@
-// ============================================================================
-// main.js - Full version (with Toast Undo + Sorting Dropdown)
-// ============================================================================
-
 const PRIORITY_COLORS = { High: "red", Mid: "orange", Low: "green" };
 let todos = [];
 let calendar;
