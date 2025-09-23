@@ -208,25 +208,65 @@ section h3 {
 }
 
 /* Toast */
+/* Toast */
 .toast {
   position: fixed;
   left: 50%;
   bottom: 24px;
   transform: translateX(-50%) translateY(120%);
-  background: #2b2b2b;
+  background: #1e1e1e;
   color: #fff;
-  padding: 12px 16px;
+  padding: 10px 14px;
   border-radius: 8px;
   display: flex;
   align-items: center;
-  gap: 12px;
-  box-shadow: 0 6px 16px rgba(0,0,0,0.3);
+  gap: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+  border-left: 4px solid #b694f6;  /* accent bar */
   transition: transform 0.25s ease, opacity 0.25s ease;
   opacity: 0;
   z-index: 10000;
+  font-size: 14px;
 }
 
 .toast.show {
   transform: translateX(-50%) translateY(0%);
   opacity: 1;
 }
+
+/* Toast Undo button */
+#toast-undo {
+  background: #b694f6;
+  border: none;
+  color: #000;
+  font-weight: bold;
+  font-size: 13px;
+  padding: 4px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+#toast-undo:hover {
+  background: #d1b9f9;
+}
+
+.icon-btn {
+  width: 20px;
+  height: 20px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  color: #b694f6;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.icon-btn:hover {
+  color: #fff;
+}
+.icon-edit::before { content: "✏️"; }
+.icon-delete::before { content: "🗑️"; }
+
+
